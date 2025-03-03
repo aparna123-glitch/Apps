@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Registration - XYZ College</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eef2f3;
+        }
+        .header {
+            background: linear-gradient(90deg, #004080, #0066cc);
+            color: white;
+            text-align: center;
+            padding: 25px;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            background: #00274d;
+            padding: 12px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            margin: 0 15px;
+            font-size: 18px;
+            font-weight: 500;
+            border-radius: 25px;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .nav a:hover {
+            background: #0056b3;
+            transform: scale(1.1);
+        }
+        .container {
+            text-align: center;
+            padding: 60px;
+        }
+        .form-container {
+            background: white;
+            padding: 30px;
+            width: 400px;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .form-container input[type="submit"] {
+            background: #007BFF;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .form-container input[type="submit"]:hover {
+            background: #0056b3;
+        }
+        .footer {
+            background: linear-gradient(90deg, #004080, #0066cc);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+            font-weight: bold;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #ff4500;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .back-btn:hover {
+            background: #cc3700;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Welcome to Model College</div>
+    <div class="nav">
+        <a href="{% url 'homepage' %}">Home</a>
+        <a href="about">About Us</a>
+        <a href="courses">Courses</a>
+        <a href="admissions">Admissions</a>
+        <a href="contact">Contact</a>
+    </div>
+    <div class="container">
+        <h2>Teacher Registration</h2>
+        <div class="form-container">
+            <form action="{% url 'teacher_register' %}" method="post">
+                {% csrf_token %}
+                <input type="text" name="firstname" placeholder="First Name" required>
+                <input type="text" name="lastname" placeholder="Last Name" required>
+                <input type="number" name="phonenumber" placeholder="Phone Number" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="text" name="address" placeholder="Address" required>
+                <input type="text" name="experience" placeholder="Experience (years)" required>
+                <input type="number" name="salary" placeholder="Salary (INR)" required>
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="submit" value="Register">
+            </form>
+        </div>
+        <a href="{% url 'homepage' %}" class="back-btn">Back</a>
+    </div>
+    <div class="footer">&copy; 2025 Model College. All Rights Reserved.</div>
+</body>
+</html>

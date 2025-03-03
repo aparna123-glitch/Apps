@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Process - XYZ College</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            padding: 40px;
+            background: url('https://source.unsplash.com/1600x400/?interview,meeting') no-repeat center center/cover;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        .container h2 {
+            font-size: 26px;
+            font-weight: 600;
+            color: #004080;
+        }
+        .details {
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+            border-radius: 8px;
+            text-align: left;
+            margin-top: 20px;
+        }
+        .details p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+        }
+        .apply-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .apply-btn:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+        }
+        .btn-home {
+            display: block;
+            width: fit-content;
+            margin: 25px auto;
+            padding: 12px 20px;
+            background: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+        .btn-home:hover {
+            background: #218838;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        Interview Process - Prepare for Success!
+    </div>
+
+    <div class="container">
+        <h2>Interview Details</h2>
+        <div class="details">
+            <p><strong>Date:</strong> [Scheduled Date]</p>
+            <p><strong>Mode:</strong> Online / In-person</p>
+            <p><strong>Duration:</strong> 30-45 minutes</p>
+            <p><strong>Topics Covered:</strong></p>
+            <ul>
+                <li>Personal Introduction</li>
+                <li>Academic Background</li>
+                <li>Motivation for Course Selection</li>
+                <li>General Knowledge & Subject-Related Questions</li>
+            </ul>
+            <p><strong>Instructions:</strong> Be on time, dress formally, and be prepared to discuss your aspirations and academic strengths.</p>
+        </div>
+        
+        <a href="{% url 'admission_offer' %}" class="apply-btn">Proceed to Next Step</a>
+    </div>
+    
+    <a href="{% url 'homepage' %}" class="btn-home">Back to Home</a>
+</body>
+</html>

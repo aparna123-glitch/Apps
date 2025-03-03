@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Events - XYZ College</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #0d0d0d;
+            color: #fff;
+            text-align: center;
+        }
+        .header {
+            padding: 60px;
+            font-size: 32px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #ff6f00, #ff9100);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0px 4px 8px rgba(255, 165, 0, 0.5);
+            animation: fadeIn 1s ease-in-out;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+        .news-card {
+            background: #1c1c1c;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 5px 12px rgba(255, 165, 0, 0.3);
+            transition: all 0.3s ease-in-out;
+            overflow: hidden;
+            position: relative;
+        }
+        .news-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0px 8px 20px rgba(255, 165, 0, 0.5);
+        }
+        .news-image {
+            width: 100%;
+            border-radius: 12px;
+            height: 200px;
+            object-fit: cover;
+            transition: all 0.3s ease-in-out;
+        }
+        .news-card:hover .news-image {
+            filter: brightness(80%);
+            transform: scale(1.05);
+        }
+        .news-content {
+            padding: 15px;
+        }
+        .news-content h3 {
+            font-size: 22px;
+            color: #ffcc00;
+        }
+        .news-content p {
+            font-size: 15px;
+            color: #bbb;
+            margin-top: 10px;
+        }
+        .btn-home {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 14px 28px;
+            background: #ff6f00;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+        }
+        .btn-home:hover {
+            background: #ff9100;
+            transform: scale(1.08);
+        }
+
+        /* Fade-in Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        Latest News & Upcoming Events
+    </div>
+
+    <div class="container">
+        <div class="news-card">
+            <img src="static/pic1.jpeg" alt="AI Summit 2025" class="news-image">
+            <div class="news-content">
+                <h3>AI Summit 2025</h3>
+                <p>Date: March 15, 2025 | Venue: Innovation Hub</p>
+                <p>Meet AI experts and discuss the future of artificial intelligence.</p>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <img src="static/pic2.webp" alt="Annual Fest" class="news-image">
+            <div class="news-content">
+                <h3>Model College Annual Fest</h3>
+                <p>Date: April 22, 2025 | Venue: Campus Arena</p>
+                <p>Experience music, dance, and cultural performances by talented students.</p>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <img src="static/pic3.jpeg" alt="Coding Championship" class="news-image">
+            <div class="news-content">
+                <h3>National Coding Championship</h3>
+                <p>Date: May 10, 2025 | Venue: Tech Park</p>
+                <p>Test your programming skills and win exciting cash prizes!</p>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <img src="static/pic4.jpg" alt="Sports Meet" class="news-image">
+            <div class="news-content">
+                <h3>Inter-College Sports Meet</h3>
+                <p>Date: June 30, 2025 | Venue: College Grounds</p>
+                <p>Cheer for your team in football, basketball, and athletics events.</p>
+            </div>
+        </div>
+        <div class="news-card">
+            <img src="static/pic5.jpeg" alt="Tech Talk" class="news-image">
+            <div class="news-content">
+                <h3>Tech Talk by Industry Leaders</h3>
+                <p>Date: July 20, 2025 | Venue: Main Auditorium</p>
+                <p>Gain insights from top CEOs and tech pioneers on emerging trends.</p>
+            </div>
+        </div>
+        
+        <div class="news-card">
+            <img src="static/pic6.jpg" alt="Robotics Workshop" class="news-image">
+            <div class="news-content">
+                <h3>Robotics Workshop</h3>
+                <p>Date: August 5, 2025 | Venue: Engineering Lab</p>
+                <p>Learn to build and program robots in this hands-on training session.</p>
+            </div>
+        </div>
+        
+        <div class="news-card">
+            <img src="static/pic7.jpeg" alt="Environmental Drive" class="news-image">
+            <div class="news-content">
+                <h3>Environmental Awareness Drive</h3>
+                <p>Date: September 12, 2025 | Venue: Community Park</p>
+                <p>Join us in tree planting and cleaning drives to make our city greener!</p>
+            </div>
+        </div>
+        
+    
+    </div>
+
+    <a href="{% url 'homepage' %}" class="btn-home">Back to Home</a>
+</body>
+</html>

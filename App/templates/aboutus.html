@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - XYZ College</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            padding: 60px;
+            background: url('https://source.unsplash.com/1600x600/?university,college') no-repeat center center/cover;
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .container h2 {
+            font-size: 28px;
+            font-weight: 600;
+            color: #004080;
+        }
+        .container p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-top: 10px;
+        }
+        .mission-vision {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+        .box {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+            background: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            text-align: center;
+            margin: 10px;
+        }
+        .box h3 {
+            color: #007BFF;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        .team-section {
+            margin-top: 50px;
+        }
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .team-member {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            width: 250px;
+        }
+        .team-member img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border: 3px solid #007BFF;
+        }
+        .team-member h4 {
+            font-size: 20px;
+            color: #004080;
+            margin: 5px 0;
+        }
+        .team-member p {
+            font-size: 16px;
+            color: #555;
+        }
+        .btn-home {
+            display: block;
+            width: fit-content;
+            margin: 30px auto;
+            padding: 12px 25px;
+            background: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+        .btn-home:hover {
+            background: #218838;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    {% block content %}
+
+    <!-- Header -->
+    <div class="header">
+        About Model College - Excellence in Education
+    </div>
+
+    <!-- About Section -->
+    <div class="container">
+        <h2>Who We Are</h2>
+        <p>XYZ College is dedicated to fostering excellence in education and research. Our institution is committed to empowering students with knowledge, skills, and opportunities to shape a better future.</p>
+
+        <!-- Mission and Vision -->
+        <div class="mission-vision">
+            <div class="box">
+                <h3>Our Mission</h3>
+                <p>To provide high-quality education, cultivate innovative thinking, and nurture future leaders in various fields.</p>
+            </div>
+            <div class="box">
+                <h3>Our Vision</h3>
+                <p>To be a globally recognized institution that transforms lives through education, research, and community engagement.</p>
+            </div>
+        </div>
+
+        <!-- Team Section -->
+        <div class="team-section">
+            <h2>Meet Our Leadership</h2>
+            <div class="team-container">
+                <div class="team-member">
+                    <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Principal">
+                    <h4>Dr. John Smith</h4>
+                    <p>Principal</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Vice Principal">
+                    <h4>Dr. Emily Johnson</h4>
+                    <p>Vice Principal</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Dean">
+                    <h4>Dr. Robert Brown</h4>
+                    <p>Dean of Academics</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://randomuser.me/api/portraits/women/4.jpg" alt="Director">
+                    <h4>Dr. Olivia Williams</h4>
+                    <p>Director of Research</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}
+
+    <!-- Back to Home Button -->
+    <a href="{% url 'homepage' %}" class="btn-home">Back to Home</a>
+
+</body>
+</html>

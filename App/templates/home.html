@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XYZ College</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: url('https://source.unsplash.com/1600x600/?college,education') no-repeat center center/cover;
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+        .welcome {
+            padding: 50px 20px;
+            text-align: center;
+            color: #333;
+        }
+        .welcome h1 {
+            font-size: 28px;
+            font-weight: 600;
+        }
+        .cta-buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .cta-buttons a {
+            text-decoration: none;
+            background: #007BFF;
+            color: white;
+            padding: 12px 25px;
+            margin: 10px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            display: inline-block;
+            transition: 0.3s ease;
+        }
+        .cta-buttons a:hover {
+            background: #0056b3;
+            transform: scale(1.1);
+        }
+        .features {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 50px;
+            gap: 20px;
+        }
+        .feature-box {
+            text-align: center;
+            padding: 20px;
+            width: 300px;
+            background: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            transition: 0.3s ease;
+        }
+        .feature-box:hover {
+            transform: translateY(-5px);
+        }
+        .feature-box img {
+            width: 80px;
+            margin-bottom: 15px;
+        }
+        .btn-home {
+            display: block;
+            width: fit-content;
+            margin: 30px auto;
+            padding: 12px 25px;
+            background: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            transition: 0.3s ease;
+        }
+        .btn-home:hover {
+            background: #218838;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    {% block content %}
+
+    <!-- Hero Section -->
+    <div class="hero">
+        Welcome to Model College - Your Future Begins Here!
+    </div>
+
+    <!-- Welcome Message -->
+    <div class="welcome">
+        <h1>Empowering Students with Knowledge & Innovation</h1>
+        <p>At Model College, we provide world-class education to shape the leaders of tomorrow.</p>
+    </div>
+
+    <!-- Features Section -->
+    <div class="features">
+        <div class="feature-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/2732/2732581.png" alt="Library Icon">
+            <h3>State-of-the-Art Library</h3>
+            <p>Access thousands of books and research materials.</p>
+        </div>
+        <div class="feature-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/3163/3163508.png" alt="Labs Icon">
+            <h3>Advanced Laboratories</h3>
+            <p>Hands-on experience with cutting-edge technology.</p>
+        </div>
+        <div class="feature-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/2907/2907038.png" alt="Campus Icon">
+            <h3>Vibrant Campus Life</h3>
+            <p>Engage in clubs, sports, and cultural activities.</p>
+        </div>
+        
+        <!-- Newly Added Sections -->
+        <div class="feature-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/2331/2331714.png" alt="Industry Partnerships">
+            <h3>Industry Partnerships</h3>
+            <p>Gain real-world experience with internships and collaborations.</p>
+        </div>
+
+        <div class="feature-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/3448/3448331.png" alt="Exchange Programs">
+            <h3>Student Exchange Programs</h3>
+            <p>Broaden your perspective with global learning opportunities.</p>
+        </div>
+
+        <div class="feature-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png" alt="Expert Faculty">
+            <h3>Expert Faculty</h3>
+            <p>Learn from experienced professors and industry leaders.</p>
+        </div>
+    </div>
+
+    {% endblock %}
+
+    <!-- Back to Home Button -->
+    <a href="{% url 'homepage' %}" class="btn-home">Back to Home</a>
+
+</body>
+</html>

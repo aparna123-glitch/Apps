@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fee Payment - XYZ College</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(circle, #1E3C72, #2A5298);
+            color: #fff;
+            text-align: center;
+        }
+        .header {
+            padding: 50px;
+            font-size: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            border-bottom: 3px solid #FFDD57;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(8px);
+        }
+        h2 {
+            font-size: 26px;
+            font-weight: 600;
+            color: #FFDD57;
+        }
+        p {
+            font-size: 16px;
+            color: #f1f1f1;
+        }
+        .payment-options {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+        .payment-btn {
+            display: block;
+            width: 80%;
+            padding: 14px;
+            background: linear-gradient(135deg, #FFDD57, #FFA500);
+            color: #222;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 3px 10px rgba(255, 165, 0, 0.5);
+        }
+        .payment-btn:hover {
+            background: #FFC107;
+            transform: translateY(-3px);
+        }
+        .btn-home {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 20px;
+            background: #FF416C;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+        }
+        .btn-home:hover {
+            background: #E13E57;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        Secure Your Admission - Complete Fee Payment
+    </div>
+
+    <div class="container">
+        <h2>Fee Payment Options</h2>
+        <p>Select your preferred payment method and proceed to complete your admission.</p>
+        
+        <div class="payment-options">
+            <a href="https://www.rupay.co.in/" class="payment-btn">Pay via Credit/Debit Card</a>
+            <a href="https://netbanking.hdfcbank.com/netbanking/" class="payment-btn">Pay via Net Banking</a>
+            <a href="https://upilinks.in/" class="payment-btn">Pay via UPI</a>
+            <a href="https://www.paypal.com/in/webapps/mpp/paypal-me" class="payment-btn">Pay via PayPal</a>
+        </div>
+    </div>
+    <a href="{% url 'homepage' %}" class="btn-home">Back to Home</a>
+</body>
+</html>

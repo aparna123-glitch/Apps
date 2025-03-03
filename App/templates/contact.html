@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - XYZ College</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            padding: 40px;
+            background: url('https://source.unsplash.com/1600x400/?contact,office') no-repeat center center/cover;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        .container h2 {
+            font-size: 26px;
+            font-weight: 600;
+            color: #004080;
+        }
+        .contact-info {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .contact-box {
+            background: white;
+            padding: 20px;
+            width: 250px;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+            border-radius: 8px;
+            text-align: center;
+            transition: 0.3s ease;
+        }
+        .contact-box:hover {
+            transform: translateY(-5px);
+        }
+        .contact-box img {
+            width: 50px;
+            margin-bottom: 10px;
+        }
+        .contact-box h3 {
+            font-size: 18px;
+            color: #007BFF;
+        }
+        .contact-box p {
+            font-size: 14px;
+            color: #555;
+        }
+        .contact-form {
+            margin-top: 40px;
+            text-align: left;
+        }
+        .contact-form input, 
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+        .contact-form button {
+            background: #007BFF;
+            color: white;
+            padding: 12px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+        .contact-form button:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+        }
+        .map {
+            margin-top: 40px;
+        }
+        .btn-home {
+            display: block;
+            width: fit-content;
+            margin: 25px auto;
+            padding: 12px 20px;
+            background: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+        .btn-home:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    {% block content %}
+
+    <!-- Header -->
+    <div class="header">
+        Contact Us - We’re Here to Help!
+    </div>
+
+    <!-- Contact Info Section -->
+    <div class="container">
+        <h2>Get in Touch</h2>
+
+        <div class="contact-info">
+            <div class="contact-box">
+                <img src="https://cdn-icons-png.flaticon.com/512/3178/3178158.png" alt="Phone">
+                <h3>Phone</h3>
+                <p>+91 98765 43210</p>
+            </div>
+            <div class="contact-box">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
+                <h3>Email</h3>
+                <p>info@modelcollege.com</p>
+            </div>
+            <div class="contact-box">
+                <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Location">
+                <h3>Address</h3>
+                <p>123, College Road, City, India</p>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <!-- Google Map -->
+        <div class="map">
+            <h2>Our Location</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509371!2d144.9631578153181!3d-37.816279742021245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x5045675218ce7e33!2sUniversity!5e0!3m2!1sen!2sin!4v1649089387973!5m2!1sen!2sin" 
+            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+
+    {% endblock %}
+
+    <!-- Back to Home Button -->
+    <a href="{% url 'homepage' %}" class="btn-home">Back to Home</a>
+
+</body>
+</html>

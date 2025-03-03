@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="2px" style="text-align: center;">
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Phonenumber</th>
+            <th>Salary</th>
+            <th>Experience</th>
+            <!-- {% comment %} <th>Delete</th>
+            <th>Approve</th> {% endcomment %} -->
+        </tr>
+        {% for i in fun %}
+        <tr>
+            <td>{{i.teacher_id.first_name}}</td>
+            <td>{{i.teacher_id.last_name}}</td>
+            <td>{{i.teacher_id.email}}</td>
+            <td>{{i.address}}</td>
+            <td>{{i.phone_number}}</td>
+            <td>{{i.salary}}</td>
+            <td>{{i.experience}}</td>
+            {% comment %} <td><a href="del_teacher/{{i.id}}">delete</a></td>
+            <td><a href="tea_approve/{{i.id}}">approve</a></td> {% endcomment %}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
