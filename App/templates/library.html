@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 30px;
+        }
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 42px;
+            font-weight: 700;
+            background: linear-gradient(to right, #7f00ff, #e100ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+            margin-top: 30px;
+            backdrop-filter: blur(10px);
+        }
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+        .image-gallery img {
+            width: 230px;
+            height: 160px;
+            border-radius: 12px;
+            object-fit: cover;
+            transition: transform 0.3s, box-shadow 0.3s;
+            filter: brightness(0.85);
+        }
+        .image-gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 5px 15px rgba(127, 0, 255, 0.4);
+            filter: brightness(1);
+        }
+        .btn-home {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 30px;
+            background: linear-gradient(45deg, #7f00ff, #e100ff);
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: transform 0.2s, box-shadow 0.3s;
+        }
+        .btn-home:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 4px 15px rgba(127, 0, 255, 0.5);
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            font-size: 18px;
+            margin: 8px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📚 Welcome to the Library 📚</h1>
+        <p>Discover an extensive collection of books, digital resources, and quiet study spaces.</p>
+
+        <!-- Image Gallery -->
+        <div class="image-gallery">
+            <img src="https://images.pexels.com/photos/256541/pexels-photo-256541.jpeg" alt="Library Interior">
+            <img src="https://images.pexels.com/photos/137029/pexels-photo-137029.jpeg" alt="Bookshelf">
+            <img src="https://images.pexels.com/photos/4855389/pexels-photo-4855389.jpeg" alt="Study Area">
+            <img src="https://images.pexels.com/photos/289817/pexels-photo-289817.jpeg" alt="Open Books">
+            <img src="https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg" alt="Students in Library">
+        </div>
+
+        <!-- Library Timings -->
+        <div class="card">
+            <h2>⏳ Library Timings</h2>
+            <ul>
+                <li>📅 Monday - Friday: 8:00 AM - 8:00 PM</li>
+                <li>📅 Saturday: 9:00 AM - 5:00 PM</li>
+                <li>📅 Sunday & Public Holidays: Closed</li>
+            </ul>
+        </div>
+
+        <!-- Book Categories -->
+        <div class="card">
+            <h2>📖 Book Categories</h2>
+            <ul>
+                <li>🔬 Science & Technology</li>
+                <li>📜 History & Culture</li>
+                <li>📊 Business & Economics</li>
+                <li>💻 Computer Science & AI</li>
+                <li>📝 Fiction & Literature</li>
+                <li>🌍 Environmental Studies</li>
+            </ul>
+        </div>
+
+        <!-- Library Services -->
+        <div class="card">
+            <h2>🎓 Library Services</h2>
+            <ul>
+                <li>📚 Book Borrowing & Returns</li>
+                <li>💻 Digital Resources & E-books</li>
+                <li>📖 Quiet Study Areas</li>
+                <li>🔍 Research Assistance</li>
+                <li>📶 Free WiFi</li>
+                <li>🖨️ Printing & Photocopy Services</li>
+            </ul>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="card">
+            <h2>📞 Contact Us</h2>
+            <p>📍 Address: XYZ University Library, ABC City</p>
+            <p>📧 Email: library@xyzuniversity.edu</p>
+            <p>📞 Phone: +91 9876543210</p>
+        </div>
+
+        <a href="{% url 'homepage' %}" class="btn-home">🏠 Back to Home</a>
+    </div>
+</body>
+</html>

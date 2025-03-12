@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Opportunities - Model College</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eef2f3;
+            text-align: center;
+        }
+
+        .header {
+            background: linear-gradient(90deg, #8e44ad, #2980b9);
+            color: white;
+            padding: 20px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            color: #8e44ad;
+            margin-bottom: 10px;
+        }
+
+        .section p {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #2980b9;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #1c598a;
+        }
+
+        .footer {
+            background: linear-gradient(90deg, #8e44ad, #2980b9);
+            color: white;
+            padding: 15px;
+            font-size: 14px;
+            margin-top: 30px;
+        }
+
+        .opportunity-list {
+            text-align: left;
+            margin: 20px auto;
+            width: 80%;
+        }
+
+        .opportunity-item {
+            padding: 12px;
+            margin: 10px 0;
+            background-color: #f0e6fa;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .opportunity-item h3 {
+            margin: 0;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .opportunity-item p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        .apply-btn {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 8px 16px;
+            background: #8e44ad;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .apply-btn:hover {
+            background: #732d91;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Placement Opportunities - Model College</div>
+    <div class="container">
+        <div class="section">
+            <h2>🚀 Campus Placement Opportunities</h2>
+            <div class="opportunity-list">
+                <div class="opportunity-item">
+                    <h3>Software Developer at Infosys</h3>
+                    <p>Eligibility: B.Tech/B.E. in Computer Science or IT</p>
+                    <p>Package: 6 LPA</p>
+                    <p>Location: Bangalore</p>
+                    <a href="#" class="apply-btn">Apply Now</a>
+                </div>
+
+                <div class="opportunity-item">
+                    <h3>Data Analyst at TCS</h3>
+                    <p>Eligibility: B.Sc/M.Sc in Data Science or Statistics</p>
+                    <p>Package: 5 LPA</p>
+                    <p>Location: Chennai</p>
+                    <a href="#" class="apply-btn">Apply Now</a>
+                </div>
+
+                <div class="opportunity-item">
+                    <h3>Marketing Executive at HDFC Bank</h3>
+                    <p>Eligibility: MBA in Marketing</p>
+                    <p>Package: 4.5 LPA</p>
+                    <p>Location: Mumbai</p>
+                    <a href="#" class="apply-btn">Apply Now</a>
+                </div>
+            </div>
+            <a href="{% url 'more_info' %}" class="back-btn">⬅ Back to More Information</a>
+        </div>
+    </div>
+    <div class="footer">&copy; 2025 Model College. All Rights Reserved.</div>
+</body>
+</html>

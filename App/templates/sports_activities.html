@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Activities - Model College</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eef2f3;
+            text-align: center;
+        }
+
+        .header {
+            background: linear-gradient(90deg, #006400, #228B22);
+            color: white;
+            padding: 20px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            color: #006400;
+            margin-bottom: 10px;
+        }
+
+        .section p {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #228B22;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #006400;
+        }
+
+        .footer {
+            background: linear-gradient(90deg, #006400, #228B22);
+            color: white;
+            padding: 15px;
+            font-size: 14px;
+            margin-top: 30px;
+        }
+
+        .activity-list {
+            text-align: left;
+            margin: 20px auto;
+            width: 80%;
+        }
+
+        .activity-item {
+            padding: 12px;
+            margin: 10px 0;
+            background-color: #e0f7e0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .activity-item h3 {
+            margin: 0;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .activity-item p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Sports Activities - Model College</div>
+    <div class="container">
+        <div class="section">
+            <h2>🏅 Sports Activities</h2>
+            <div class="activity-list">
+                <div class="activity-item">
+                    <h3>Intercollegiate Football Tournament</h3>
+                    <p>Date: 20th March 2025</p>
+                    <p>Venue: College Football Ground</p>
+                    <p>Join and cheer for our team as they compete with top colleges in the state.</p>
+                </div>
+
+                <div class="activity-item">
+                    <h3>Annual Sports Meet</h3>
+                    <p>Date: 10th April 2025</p>
+                    <p>Venue: College Stadium</p>
+                    <p>A day filled with athletics, team sports, and prize distribution.</p>
+                </div>
+
+                <div class="activity-item">
+                    <h3>Badminton Championship</h3>
+                    <p>Date: 5th May 2025</p>
+                    <p>Venue: Indoor Sports Complex</p>
+                    <p>Register your team and showcase your badminton skills!</p>
+                </div>
+            </div>
+            <a href="{% url 'more_info' %}" class="back-btn">⬅ Back to More Information</a>
+        </div>
+    </div>
+    <div class="footer">&copy; 2025 Model College. All Rights Reserved.</div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Exam</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 700px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: auto;
+        }
+        h2 {
+            color: #007BFF;
+        }
+        .question {
+            text-align: left;
+            margin-bottom: 15px;
+        }
+        button {
+            background: #28a745;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Entrance Exam</h2>
+        <form method="POST" action="{% url 'exam_submission' %}">
+            {% csrf_token %}
+
+            <div class="question">
+                <p><strong>1. What is 5 + 7?</strong></p>
+                <input type="radio" name="q1" value="10"> 10
+                <input type="radio" name="q1" value="12"> 12
+                <input type="radio" name="q1" value="14"> 14
+            </div>
+
+            <div class="question">
+                <p><strong>2. What is the capital of India?</strong></p>
+                <input type="radio" name="q2" value="Mumbai"> Mumbai
+                <input type="radio" name="q2" value="Delhi"> Delhi
+                <input type="radio" name="q2" value="Kolkata"> Kolkata
+            </div>
+
+            <button type="submit">Submit Exam</button>
+        </form>
+    </div>
+</body>
+</html>

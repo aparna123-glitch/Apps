@@ -24,19 +24,26 @@
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
         }
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 30px auto;
             padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
         }
         .committee-card {
             background: white;
             padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
             text-align: left;
             display: flex;
             align-items: center;
+            transition: all 0.3s ease-in-out;
+        }
+        .committee-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
         }
         .icon {
             font-size: 40px;
@@ -45,17 +52,17 @@
         }
         .committee-content h3 {
             margin: 0;
-            font-size: 22px;
+            font-size: 20px;
             color: #004080;
         }
         .committee-content p {
-            font-size: 15px;
-            color: #666;
+            font-size: 14px;
+            color: #555;
             margin-top: 5px;
         }
         .btn-home {
             display: inline-block;
-            margin-top: 30px;
+            margin: 30px 0;
             padding: 12px 20px;
             background: #28a745;
             color: white;
@@ -114,6 +121,46 @@
             <div class="committee-content">
                 <h3>Innovation & Research Committee</h3>
                 <p>Supports students in research activities, funding projects, and organizing tech expos.</p>
+            </div>
+        </div>
+
+        <div class="committee-card">
+            <div class="icon">📢</div>
+            <div class="committee-content">
+                <h3>Student Welfare Committee</h3>
+                <p>Addresses student concerns and ensures a positive campus experience with health and career support.</p>
+            </div>
+        </div>
+
+        <div class="committee-card">
+            <div class="icon">🔍</div>
+            <div class="committee-content">
+                <h3>Anti-Ragging Committee</h3>
+                <p>Ensures a safe and ragging-free environment by monitoring student interactions and awareness programs.</p>
+            </div>
+        </div>
+
+        <div class="committee-card">
+            <div class="icon">📜</div>
+            <div class="committee-content">
+                <h3>Grievance Redressal Committee</h3>
+                <p>Handles complaints and grievances from students and faculty to maintain a healthy college atmosphere.</p>
+            </div>
+        </div>
+
+        <div class="committee-card">
+            <div class="icon">🌱</div>
+            <div class="committee-content">
+                <h3>Eco & Sustainability Committee</h3>
+                <p>Promotes eco-friendly initiatives like tree planting, waste management, and sustainability drives.</p>
+            </div>
+        </div>
+
+        <div class="committee-card">
+            <div class="icon">🩺</div>
+            <div class="committee-content">
+                <h3>Health & Wellness Committee</h3>
+                <p>Conducts awareness programs, mental health sessions, and first-aid training for students.</p>
             </div>
         </div>
     </div>

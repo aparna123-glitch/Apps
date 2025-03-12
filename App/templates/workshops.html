@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshops - Model College</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eef2f3;
+            text-align: center;
+        }
+
+        .header {
+            background: linear-gradient(90deg, #004080, #0066cc);
+            color: white;
+            padding: 20px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            color: #004080;
+            margin-bottom: 10px;
+        }
+
+        .section p {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #0056b3;
+        }
+
+        .footer {
+            background: linear-gradient(90deg, #004080, #0066cc);
+            color: white;
+            padding: 15px;
+            font-size: 14px;
+            margin-top: 30px;
+        }
+
+        .workshop-list {
+            text-align: left;
+            margin: 20px auto;
+            width: 80%;
+        }
+
+        .workshop-item {
+            padding: 12px;
+            margin: 10px 0;
+            background-color: #f0f4f8;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .workshop-item h3 {
+            margin: 0;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .workshop-item p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Workshops - Model College</div>
+    <div class="container">
+        <div class="section">
+            <h2>Upcoming Workshops</h2>
+            <div class="workshop-list">
+                <div class="workshop-item">
+                    <h3>Web Development Bootcamp</h3>
+                    <p>Date: 25th March 2025</p>
+                    <p>Instructor: Ms. Neha Varma</p>
+                    <p>Learn the fundamentals of web development with hands-on sessions.</p>
+                </div>
+
+                <div class="workshop-item">
+                    <h3>Python for Data Science</h3>
+                    <p>Date: 2nd April 2025</p>
+                    <p>Instructor: Mr. Arjun Menon</p>
+                    <p>Explore data analysis and visualization techniques using Python.</p>
+                </div>
+
+                <div class="workshop-item">
+                    <h3>Digital Marketing Strategies</h3>
+                    <p>Date: 10th April 2025</p>
+                    <p>Instructor: Ms. Priya Nair</p>
+                    <p>Understand effective digital marketing strategies to grow businesses.</p>
+                </div>
+            </div>
+            <a href="{% url 'more_info' %}" class="back-btn">⬅ Back to More Information</a>
+        </div>
+    </div>
+    <div class="footer">&copy; 2025 Model College. All Rights Reserved.</div>
+</body>
+</html>

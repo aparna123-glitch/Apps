@@ -3,47 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Login | XYZ College</title>
+    <title>Login | Model College</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
-
         body {
             font-family: 'Montserrat', sans-serif;
-            margin: 0;
-            padding: 0;
             background: linear-gradient(135deg, #007BFF, #00d4ff);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .header {
-            background: #00274d;
-            color: white;
             text-align: center;
-            padding: 20px;
-            font-size: 24px;
-            font-weight: bold;
-            width: 100%;
-            position: absolute;
-            top: 0;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 50px;
         }
         .form-container {
             background: white;
             padding: 40px;
             width: 350px;
+            margin: auto;
             border-radius: 12px;
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            margin-top: 70px;
-        }
-        .form-container h2 {
-            margin-bottom: 20px;
-            color: #333;
-            font-size: 22px;
-            font-weight: 600;
         }
         .form-container input {
             width: 100%;
@@ -52,69 +26,29 @@
             border: 1px solid #ccc;
             border-radius: 8px;
             font-size: 16px;
-            font-weight: 400;
-            transition: border-color 0.3s ease-in-out;
-        }
-        .form-container input:focus {
-            border-color: #007BFF;
-            outline: none;
         }
         .form-container input[type="submit"] {
             background: #007BFF;
             color: white;
             font-weight: bold;
             cursor: pointer;
-            transition: background 0.3s ease-in-out, transform 0.2s;
+            transition: background 0.3s;
             font-size: 18px;
-            border: none;
         }
         .form-container input[type="submit"]:hover {
             background: #0056b3;
-            transform: scale(1.05);
-        }
-        .back-btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background: #ff4500;
-            color: white;
-            font-size: 16px;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 6px;
-            transition: background 0.3s ease-in-out, transform 0.2s;
-        }
-        .back-btn:hover {
-            background: #cc3700;
-            transform: scale(1.1);
-        }
-        .footer {
-            background: #00274d;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            font-size: 14px;
-            font-weight: bold;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
 <body>
-    <div class="header">Model College | Student Login</div>
     <div class="form-container">
         <h2>Login to Your Account</h2>
-        <form action="{% url 'student_home_page' %}" method="post">
+        <form action="{% url 'login_all' %}" method="post">
             {% csrf_token %}
             <input type="text" name="username" placeholder="Enter your username" required>
             <input type="password" name="password" placeholder="Enter your password" required>
             <input type="submit" value="Login">
-            
         </form>
-        <a href="{% url 'homepage' %}" class="back-btn">Back</a>
     </div>
-    <div class="footer">&copy; 2025 Model College. All Rights Reserved.</div>
 </body>
 </html>

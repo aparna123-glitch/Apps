@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Life</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: linear-gradient(to right, #141e30, #243b55);
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            backdrop-filter: blur(15px);
+            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h1 {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+        .image-gallery img {
+            width: 240px;
+            height: 180px;
+            border-radius: 20px;
+            object-fit: cover;
+            transition: transform 0.3s, box-shadow 0.3s;
+            filter: brightness(0.9);
+        }
+        .image-gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.3);
+            filter: brightness(1);
+        }
+        .section {
+            margin-top: 40px;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        .btn-home {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 14px 28px;
+            background: linear-gradient(45deg, #ff6f00, #ff9100);
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .btn-home:hover {
+            background: linear-gradient(45deg, #ff9100, #ff6f00);
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌟 Welcome to Campus Life 🌟</h1>
+        <p>Discover an inspiring and engaging campus with endless opportunities!</p>
+
+        <div class="image-gallery">
+            <img src="https://images.pexels.com/photos/1184572/pexels-photo-1184572.jpeg" alt="Campus">
+            <img src="https://images.pexels.com/photos/5212338/pexels-photo-5212338.jpeg" alt="Lecture Hall">
+            <img src="https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg" alt="Graduation Ceremony">
+            <img src="https://images.pexels.com/photos/1454360/pexels-photo-1454360.jpeg" alt="Sports Activities">
+            <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f" alt="Library">
+        </div>
+
+        <!-- Events Section -->
+        <div class="section">
+            <h2>🎭 Upcoming Events</h2>
+            <p>Don't miss out on the latest cultural, academic, and sports events!</p>
+            <ul style="list-style-type: none; padding: 0;">
+                <li>📅 Tech Fest - March 15</li>
+                <li>🎵 Music Night - April 5</li>
+                <li>⚽ Intercollegiate Sports Meet - April 20</li>
+            </ul>
+        </div>
+
+        <!-- Clubs Section -->
+        <div class="section">
+            <h2>🤝 Student Clubs</h2>
+            <p>Join our diverse and fun student organizations:</p>
+            <ul style="list-style-type: none; padding: 0;">
+                <li>💻 Coding Club</li>
+                <li>🎨 Art & Design Society</li>
+                <li>🎤 Debate Club</li>
+                <li>🌱 Environmental Club</li>
+            </ul>
+        </div>
+
+        <!-- Testimonials Section -->
+        <div class="section">
+            <h2>🗣️ What Students Say</h2>
+            <p>"I love the campus environment! The best place to grow and learn." - ⭐⭐⭐⭐⭐</p>
+            <p>"From events to academics, it's been an unforgettable journey." - ⭐⭐⭐⭐⭐</p>
+        </div>
+
+        <a href="{% url 'homepage' %}" class="btn-home">🏠 Back to Home</a>
+    </div>
+</body>
+</html>

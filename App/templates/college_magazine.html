@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Magazine - Model College</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eef2f3;
+            text-align: center;
+        }
+        .header {
+            background: linear-gradient(90deg, #004080, #0066cc);
+            color: white;
+            padding: 20px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h2 {
+            color: #004080;
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.6;
+        }
+        .article {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f4f7fa;
+            border-radius: 8px;
+            text-align: left;
+        }
+        .article h3 {
+            color: #0066cc;
+            margin: 0 0 5px;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        .back-btn:hover {
+            background: #0056b3;
+        }
+        .footer {
+            background: linear-gradient(90deg, #004080, #0066cc);
+            color: white;
+            padding: 15px;
+            font-size: 14px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">College Magazine</div>
+    <div class="container">
+        <h2>Latest Edition - March 2025</h2>
+
+        <div class="article">
+            <h3>Inspiring Minds: The Journey of Our Top Scorer</h3>
+            <p>Meet John Mathew, our college topper, who shares his journey of hard work, perseverance, and dedication. Discover the secrets behind his success and how he balanced academics and extracurricular activities.</p>
+        </div>
+
+        <div class="article">
+            <h3>Campus Fest 2025 - A Cultural Extravaganza</h3>
+            <p>Relive the moments from the grand Campus Fest 2025, where students showcased their talents in dance, drama, music, and much more. Find out who stole the show and what made this event unforgettable.</p>
+        </div>
+
+        <div class="article">
+            <h3>Achievements Galore: Celebrating Academic Excellence</h3>
+            <p>Our students have made us proud yet again by achieving top ranks in various university exams. Explore the list of achievers and their experiences on making it to the top.</p>
+        </div>
+
+        <a href="{% url 'more_info' %}" class="back-btn">⬅ Back to More Information</a>
+    </div>
+    <div class="footer">&copy; 2025 Model College. All Rights Reserved.</div>
+</body>
+</html>

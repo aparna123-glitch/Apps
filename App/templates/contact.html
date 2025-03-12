@@ -165,6 +165,35 @@
 
     <!-- Back to Home Button -->
     <a href="{% url 'homepage' %}" class="btn-home">Back to Home</a>
-
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelector(".contact-form form").addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent page reload
+    
+                let name = document.querySelector("input[name='name']").value.trim();
+                let email = document.querySelector("input[name='email']").value.trim();
+                let message = document.querySelector("textarea[name='message']").value.trim();
+    
+                if (name === "" || email === "" || message === "") {
+                    alert("All fields are required!");
+                    return;
+                }
+    
+                if (!validateEmail(email)) {
+                    alert("Please enter a valid email address.");
+                    return;
+                }
+    
+                alert("Message sent successfully!");
+                this.reset(); // Clear form after submission
+            });
+    
+            function validateEmail(email) {
+                let re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return re.test(email);
+            }
+        });
+    </script>
+    
 </body>
 </html>
